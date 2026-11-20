@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>شبكة دعم المترشح طبيب حركاتي</title>
+<style>
+:root{--bg:#f6f7f5;--card:#fff;--tx:#1b2a22;--mu:#5d6b63;--ac:#1f7a4d;--ac2:#e6f3ec;--bd:#d9e0db;--rd:#c0392b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121815;--card:#1b241f;--tx:#e8efea;--mu:#9baba1;--ac:#4cc58a;--ac2:#1f3328;--bd:#2c3a32;--rd:#ef7a6c}}
+:root[data-theme="dark"]{--bg:#121815;--card:#1b241f;--tx:#e8efea;--mu:#9baba1;--ac:#4cc58a;--ac2:#1f3328;--bd:#2c3a32;--rd:#ef7a6c}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif;line-height:1.7}
+.w{max-width:640px;margin:0 auto;padding:16px}
+h1{font-size:1.35rem;margin:6px 0 2px}
+.sub{color:var(--mu);font-size:.92rem;margin:0 0 14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px;margin-bottom:14px}
+h2{font-size:1.05rem;margin:0 0 10px}
+label{display:block;font-size:.88rem;color:var(--mu);margin:8px 0 3px}
+input,select,button{font:inherit;color:var(--tx)}
+input,select{width:100%;padding:9px 10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg)}
+.row{display:grid;grid-template-columns:1.4fr 1fr .7fr auto;gap:6px;align-items:center;margin-bottom:6px}
+.row button{border:0;background:none;color:var(--rd);font-size:1.3rem;cursor:pointer}
+.btn{border:0;border-radius:10px;padding:11px 14px;background:var(--ac);color:#fff;cursor:pointer;font-weight:600}
+.btn.s{background:var(--ac2);color:var(--ac)}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.big{font-size:2rem;font-weight:700;color:var(--ac);line-height:1.1}
+.bar{height:10px;background:var(--ac2);border-radius:99px;overflow:hidden;margin:8px 0}
+.bar>i{display:block;height:100%;background:var(--ac);width:0;transition:width .3s}
+.k{display:flex;justify-content:space-between;gap:8px;font-size:.9rem;margin:5px 0;align-items:center}
+.k .b{flex:1;height:8px;background:var(--ac2);border-radius:99px;overflow:hidden}
+.k .b i{display:block;height:100%;background:var(--ac)}
+.k span:first-child{min-width:92px}.k span:last-child{min-width:28px;text-align:left;font-weight:600}
+.note{font-size:.8rem;color:var(--mu)}
+#msg{font-size:.9rem;margin-top:8px;min-height:1.2em;color:var(--ac)}
+.hide{display:none}
+.sec{font-size:.98rem;margin:18px 0 4px;padding-top:12px;border-top:1px solid var(--bd);color:var(--ac)}
+.opt label{display:flex;gap:8px;align-items:flex-start;color:var(--tx);font-size:.93rem;margin:5px 0}
+.opt input{width:auto;margin-top:6px}
+details{border:1px solid var(--bd);border-radius:10px;margin:8px 0;background:var(--bg)}
+summary{cursor:pointer;padding:10px 12px;font-weight:600;color:var(--ac)}
+details ul{margin:0;padding:0 28px 10px 14px}
+details li{margin:4px 0;font-size:.93rem}
+.slogan{background:var(--ac2);border:1px solid var(--ac);border-radius:12px;padding:10px 12px;font-weight:700;text-align:center;margin:10px 0}
+.hero{background:linear-gradient(135deg,#143a7a,#1b4b9b 60%,#2f8a3e);color:#fff;padding:22px 16px 26px}
+.hin{max-width:640px;margin:0 auto}
+.party{display:inline-block;background:#ffffff22;border:1px solid #ffffff55;border-radius:99px;padding:3px 14px;font-size:13px}
+.who{display:flex;gap:16px;align-items:center;margin:14px 0 10px}
+.who img{width:100px;height:100px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid #fff;background:#fff;flex:none}
+.who h1{margin:0;font-size:clamp(26px,7vw,36px)}
+.who p{margin:2px 0 0;font-size:14px;color:#e3ecff}
+.rank{font-size:14px;color:#e3ecff}
+.hs{font-size:20px;font-weight:700;margin:12px 0 4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chips span{background:#ffffff20;border-radius:99px;padding:2px 11px;font-size:12px}
+.cta{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.hb{border:1px solid #fff;background:#fff;color:#143a7a;border-radius:10px;padding:10px 14px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+.hb.o{background:transparent;color:#fff}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.date{display:inline-block;background:var(--ac2);color:var(--ac);border-radius:8px;padding:2px 10px;font-weight:700;font-size:13px}
+footer{font-size:12px;color:var(--mu);border-top:1px solid var(--bd);padding-top:12px;margin-top:6px}
+@media(max-width:600px){.r2{grid-template-columns:1fr}.who img{width:84px;height:84px}}
+.pg p{margin:6px 0;font-size:.93rem}
+.brand{display:flex;gap:14px;align-items:center}
+.logo{background:#fff;border-radius:14px;padding:6px 10px;flex:none}
+.logo img{display:block;height:64px;width:auto}
+.lst{font-size:15px;line-height:1.5;color:#e3ecff}.lst .n{font-size:21px;font-weight:700;color:#fff}
+.rk{display:inline-block;background:#f4c542;color:#14305f;font-weight:700;border-radius:99px;padding:3px 18px;font-size:16px;margin:2px 0 8px}
+</style>
+</head>
+<body>
+<div class="hero"><div class="hin"><div class="brand"><div class="logo" id="logobox" style="display:none"><img id="logo" alt="شعار حزب جبهة المستقبل"></div><div class="lst"><div>حزب جبهة المستقبل</div><div class="n">القائمة رقم 03</div></div></div>
+<div class="who"><img src="data:image/jpeg;base64,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" alt="المترشح طبيب حركاتي" width="100" height="100"><div><h1>طبيب حركاتي</h1><p>مهندس فلاحي • مسيّر مكتب دراسات فلاحي</p></div></div>
+<div class="rk">ترتيب المترشح 04</div>
+<div class="rank">المجلس الشعبي الولائي لولاية سوق أهراس — السبت 28 نوفمبر 2026</div>
+<div class="hs">من أجل تنمية محلية وولاية حقيقية</div>
+<div class="chips"><span>المواطن أولًا</span><span>الشفافية والحوكمة</span><span>تنمية مستدامة</span><span>معًا من أجل سوق أهراس</span></div>
+<div class="cta"><a class="hb" id="wa0" target="_blank" rel="noopener">راسلني على واتساب</a><button class="hb o" type="button" data-go="pledge">🗳️ أصواتي</button><button class="hb o" type="button" data-go="contact">📝 التطوع</button><button class="hb o" type="button" data-go="ask">أرسل انشغالك</button></div></div></div>
+<div class="w">
+<div class="card pg" id="invite" style="border-color:var(--ac);background:var(--ac2)">
+<p style="font-weight:700;font-size:1rem">أحبّتي وأهلي وأصدقائي،</p>
+<p>يسعدني أن أشارككم خبرًا يهمّ ولايتنا: أخونا المهندس <b>طبيب حركاتي</b> يخوض غمار الانتخابات المحلية مترشحًا لعضوية المجلس الشعبي الولائي لسوق أهراس، عن حزب جبهة المستقبل.</p>
+<p>📅 <b>الاقتراع: السبت 28 نوفمبر 2026</b></p>
+<p>أعرفه عن قرب، رجلَ ميدان وصاحب تجربة، يحمل هموم ولايتنا وطموحات شبابها وفلاحيها ومؤسساتها. وأرى فيه من يستحق أن نمنحه فرصة خدمة الولاية من داخل المجلس.</p>
+<p>لا أطلب منكم إلا ما تطيبون به نفسًا: أن تطّلعوا على برنامجه، وتحدّثوا من تثقون بهم من أهلكم وجيرانكم، وتشاركوا في يوم الاقتراع، فالمشاركة في حدّ ذاتها واجب ومسؤولية.</p>
+<p>وفقكم الله وسدّد خطانا جميعًا لما فيه خير سوق أهراس.</p>
+<p style="color:var(--mu)">أخوكم، وبكل المحبة والتقدير 🇩🇿</p>
+<div class="btns"><button class="btn" id="go" type="button">🗳️ أريد المساهمة بأصواتي</button></div>
+</div>
+
+<div class="card pg" id="commit"><h2>التزامي</h2><p style="margin:0">أتعهد، إن انتُخبت، بأن أعرض على المجلس الشعبي الولائي سجلًّا علنيًا للاحتياجات التنموية في بلديات الولاية، لاقتراح المشاريع وتسجيلها بشفافية. وتتولى الولاية والبلديات والهيئات المختصة التمويل والتنفيذ، ودوري أن أقترح وأدافع عن التسجيل وأتابع الإنجاز.</p></div>
+
+<div class="card pg" id="program">
+<h2>📄 البرنامج الانتخابي 2026–2031</h2>
+<div class="slogan">فلاحة منتجة، اقتصاد محلي نشيط، وخدمات عمومية أقرب إلى المواطن</div>
+<details open><summary>التعريف بالمترشح</summary><ul><li>طبيب حركاتي</li><li>مهندس فلاحي</li><li>مسيّر مكتب دراسات فلاحي</li><li>عضو غرفة التجارة والصناعة مجردة</li><li>خبرة في إعداد الدراسات ومتابعة المشاريع التنموية</li></ul><p style="padding:0 14px 10px">خبرة مهنية أضعها في خدمة تشخيص الاحتياجات المحلية، وترتيب الأولويات، ومتابعة المشاريع بالتنسيق مع الجهات المختصة، في حدود صلاحيات المجلس الشعبي الولائي.</p></details>
+<details><summary>رؤيتنا والفلاحة والتنمية الريفية</summary><p style="padding:0 14px">نطمح إلى ولاية أكثر توازنًا في التنمية، تستثمر في إمكاناتها الفلاحية والبشرية، وتوجّه المشاريع نحو الاحتياجات الفعلية للمواطنين. يقوم البرنامج على الاستماع الميداني، وجمع المعطيات، وترتيب الأولويات، والعمل المؤسساتي المسؤول.</p><p style="padding:0 14px;font-weight:600">منهجية العمل</p><ul><li>الاستماع إلى المواطنين والمنتخبين والفاعلين الاقتصاديين والجمعيات.</li><li>إعداد بطاقات واضحة لاحتياجات البلديات والقطاعات، مدعمة بالمعطيات المتاحة.</li><li>ترتيب الأولويات وفق الاستعجال، وعدد المستفيدين، والأثر التنموي، وإمكانية الإنجاز.</li><li>طرح المقترحات داخل المجلس ومتابعة البرامج بالتنسيق مع الولاية والقطاعات المعنية.</li><li>إطلاع المواطنين على ما تم اقتراحه ومتابعته، مع توضيح النتائج والعراقيل.</li></ul></details>
+<details><summary>المحور الأول: الفلاحة والتنمية الريفية</summary><ul><li>الدفاع عن برامج فلاحية تستجيب لخصوصية كل منطقة وإمكاناتها.</li><li>دعم تحسين الوصول إلى مياه السقي وصيانة منشآت الري وترشيد استعمال المياه بالتنسيق مع الجهات المختصة.</li><li>تشجيع الأشجار المثمرة والزراعات الملائمة للمناخ وتثمين المنتجات الفلاحية.</li><li>اقتراح حلول لتحسين التخزين والتحويل والتسويق وتقليص ضياع المنتجات.</li><li>متابعة انشغالات الفلاحين والمستثمرين وتسهيل التنسيق بين المصالح المعنية.</li></ul></details>
+<details><summary>المحور الثاني: المياه والأمن المائي</summary><ul><li>إعطاء الأولوية للمناطق التي تعاني من نقص التزويد بالماء أو ضعف منشآت السقي.</li><li>متابعة مشاريع التزويد بالماء والتطهير وصيانة الشبكات مع المصالح المختصة.</li><li>اقتراح حلول لترشيد الاستهلاك وحماية الموارد المائية والحد من التسربات.</li><li>المطالبة بمعلومات أوضح حول تقدم المشاريع وآجالها عند توفر المعطيات الرسمية.</li></ul></details>
+<details><summary>المحور الثالث: الطرق والمسالك الريفية</summary><ul><li>إحصاء المسالك والنقاط السوداء التي تعيق تنقل السكان والفلاحين ونقل المنتجات.</li><li>اقتراح ترتيب تدخلات الصيانة وفق السلامة وكثافة الاستعمال وربط التجمعات بالخدمات.</li><li>متابعة تقدم مشاريع الطرق والمسالك مع القطاعات والهيئات صاحبة الاختصاص.</li></ul></details>
+<details><summary>المحور الرابع: الاستثمار المحلي والتشغيل</summary><ul><li>تشجيع الاستثمار المنتج الذي يستجيب لمؤهلات الولاية، خاصة الفلاحة والتحويل الغذائي.</li><li>تحديد العراقيل التي تواجه المستثمرين ورفعها إلى الجهات المختصة.</li><li>دعم الربط بين التكوين المهني واحتياجات المؤسسات الاقتصادية المحلية.</li><li>تشجيع المبادرات التي تخلق مناصب شغل مستدامة، مع الاهتمام بالشباب والمرأة الريفية.</li></ul></details>
+<details><summary>المحور الخامس: الصحة والتربية والتكوين</summary><ul><li>نقل انشغالات المواطنين بشأن التغطية الصحية والنقل الصحي والتجهيزات إلى الجهات المعنية.</li><li>متابعة الاحتياجات ذات الأولوية في المؤسسات التربوية ومحيطها بالتنسيق مع المصالح المختصة.</li><li>الدفاع عن عدالة التوزيع الجغرافي للخدمات الأساسية، خاصة بالمناطق الريفية والمعزولة.</li><li>تعزيز العلاقة بين التكوين والتشغيل عبر التشاور مع المؤسسات والهيئات التكوينية.</li></ul></details>
+<details><summary>المحور السادس: الشباب والبيئة والإطار المعيشي</summary><ul><li>دعم المبادرات الثقافية والرياضية والشبابية التي تستجيب لاحتياجات البلديات.</li><li>متابعة ملفات النظافة والمساحات الخضراء وحماية المحيط والنقاط البيئية السوداء.</li><li>اقتراح مبادرات للتشجير والمحافظة على الموارد الطبيعية بالتعاون مع الجهات المعنية.</li><li>تشجيع مشاركة الشباب في التشخيص المحلي وتقديم مبادرات قابلة للتنفيذ.</li></ul></details>
+<details><summary>المحور السابع: الحوكمة والمتابعة والشفافية</summary><ul><li>إعداد سجل للاحتياجات الواردة من البلديات والمواطنين مع توثيق المصدر والتاريخ.</li><li>اقتراح ترتيب الأولويات وفق الاستعجال وعدد المستفيدين والأثر الاقتصادي والاجتماعي وجاهزية المشروع.</li><li>متابعة الملفات المطروحة في المداولات أو المرفوعة رسميًا وتوثيق الردود والتطورات المتاحة.</li><li>تقديم حصيلة دورية تتضمن ما تم اقتراحه ومتابعته وما تعذر تحقيقه وأسبابه عند توفر المعلومات.</li><li>احترام القانون والمال العام والعمل الجماعي وتجنب الوعود التي تتجاوز صلاحيات المجلس.</li></ul></details>
+<details><summary>كلمة إلى مواطني ولاية سوق أهراس</summary><p style="padding:0 14px">إن قرار الترشح نابع من قناعتي بأن التنمية تحتاج إلى كفاءات تستمع إلى المواطنين، وتفهم واقع الميدان، وتعمل على تحويل الانشغالات إلى ملفات واضحة ومقترحات قابلة للدراسة والمتابعة.</p><p style="padding:0 14px">بصفتي مهندسًا فلاحيًا، ومسيّر مكتب دراسات فلاحي، وعضوًا بغرفة التجارة والصناعة مجردة، أضع خبرتي في إعداد الدراسات ومتابعة المشاريع التنموية في خدمة مقاربة تقوم على التشخيص الواقعي وترتيب الأولويات والتنسيق مع المؤسسات المختصة.</p><p style="padding:0 14px">لا أعد بما لا أملك تنفيذه. أتعهد، في حدود الصلاحيات القانونية، بالدفاع عن انشغالات المواطنين، والمساهمة في المداولات والاقتراح، ومتابعة الملفات، والتواصل بشفافية حول ما تحقق وما تعثر وأسبابه.</p><div class="slogan">معًا من أجل تنمية متوازنة، وفرص أوسع، وخدمات أقرب إلى المواطن</div><p style="padding:0 14px;font-weight:600">التزاماتنا</p><ul><li>العمل الجماعي واحترام القانون وصلاحيات المجلس الشعبي الولائي.</li><li>تقديم مقترحات مبنية على المعطيات والاحتياجات الفعلية.</li><li>متابعة الملفات بشفافية والتواصل مع المواطنين بشأن نتائجها.</li><li>التمييز بوضوح بين المقترحات والقرارات المعتمدة والمشاريع المنجزة.</li></ul></details>
+<p class="note">البرنامج تصوّر عمل مقترح وليس برنامجًا رسميًا معتمدًا.</p>
+</div>
+
+<div class="card pg" id="ideas">
+<h2>💡 أفكار مشاريع تنموية مقترحة لإثرائها من طرف إطارات وكفاءات ولاية سوق أهراس</h2>
+<div class="slogan">البرنامج التنموي للمترشح طبيب حركاتي — رؤية سوق أهراس 2030</div>
+<p>انطلاقًا من الكفاءات المهنية والخبرة في الدراسات الفلاحية ومتابعة المشاريع التنموية، يرتكز البرنامج على خمسة محاور متكاملة، هدفها تحويل مؤهلات ولاية سوق أهراس الطبيعية والاقتصادية والجغرافية إلى مشاريع منتجة، ومناصب شغل، وتحسين ملموس في ظروف عيش المواطنين.</p>
+<p><b>الشعار:</b> فلاحة منتجة، اقتصاد محلي نشيط، وخدمات عمومية أقرب.</p>
+<p><b>المنهج:</b> الترافع من أجل المشاريع، متابعة تنفيذها، التنسيق مع السلطات والقطاعات المعنية، وإشراك المواطنين في تحديد الاحتياجات والأولويات، في إطار الصلاحيات القانونية للمجلس الشعبي الولائي.</p>
+<p class="note">الأرقام والأهداف الواردة، ومنها استهداف 10.000 هكتار مسقي، أهداف مقترحة للنقاش والإثراء، وليست اعتمادات أو مشاريع مصادقًا عليها.</p>
+<details open><summary>المحور الأول: محيطات السقي والأمن المائي</summary><p style="padding:0 14px;font-weight:700">مشروع استراتيجي لتوسيع المساحات المسقية</p><p style="padding:0 14px">ألتزم بالترافع من أجل تثمين الموارد المائية وتوسيع محيطات السقي، انطلاقًا من سد وادي ملاق، والعمل على تعبئة الموارد المائية المتاحة بما يسمح بتطوير فلاحة منتجة ومستدامة، مع إعطاء الأولوية للمناطق ذات الإمكانات الفلاحية.</p><p style="padding:0 14px;font-weight:600">الأهداف:</p><ul><li>الترافع من أجل توسيع محيطات السقي واستهداف 10.000 هكتار على مراحل، وفق الدراسات والموارد المائية المتاحة.</li><li>دعم تطوير السقي بالتقطير والاقتصاد في استهلاك المياه.</li><li>تثمين الإمكانات الفلاحية بمناطق سيدي فرج، تاورة، الدريعة، مداوروش، وادي الكبريت وأم العظائم.</li><li>تشجيع الزراعات الاستراتيجية قليلة الاستهلاك للمياه.</li><li>دعم الاستثمار في الأشجار المثمرة وتربية المواشي والتحويل الفلاحي.</li><li>المساهمة في خلق مناصب شغل دائمة وتحقيق تنمية ريفية مستدامة.</li></ul></details>
+<details><summary>المحور الثاني: الاستثمار والصناعة وتنويع الاقتصاد المحلي</summary><p style="padding:0 14px;font-weight:700">منطقة مداوروش الصناعية رافعة للتنمية</p><p style="padding:0 14px">ألتزم بالعمل من أجل استكمال تهيئة المناطق الصناعية ومناطق النشاط، وتحسين ربطها بالشبكات الضرورية، والترافع لاستقطاب المستثمرين القادرين على خلق الثروة وفرص العمل.</p><p style="padding:0 14px;font-weight:600">الأهداف:</p><ul><li>متابعة استكمال تهيئة منطقة مداوروش الصناعية ومناطق النشاط.</li><li>تحسين الربط بشبكات الكهرباء والغاز والمياه والاتصالات والطرقات.</li><li>استقطاب الاستثمارات الوطنية والأجنبية وفق الأطر القانونية.</li><li>تشجيع الصناعات التحويلية المرتبطة بالمنتجات الفلاحية والغذائية.</li><li>دعم المؤسسات الصغيرة والمتوسطة والمقاولين المحليين.</li><li>ربط التكوين المهني باحتياجات المؤسسات الاقتصادية.</li><li>إعطاء الأولوية لخلق مناصب شغل مستدامة لفائدة شباب الولاية.</li><li>تنويع الاقتصاد المحلي وتقليل الاعتماد على النشاطات التقليدية.</li></ul></details>
+<details><summary>المحور الثالث: تثمين الثروات المنجمية ودعم الصناعات التحويلية</summary><p style="padding:0 14px;font-weight:700">مشروع وادي الكبريت لتثمين الثروات المحلية</p><p style="padding:0 14px">ألتزم بالترافع من أجل تثمين الإمكانات المنجمية والصناعية المتاحة بالولاية، وفي مقدمتها المشاريع المرتبطة بمنطقة وادي الكبريت، بناءً على الدراسات التقنية والاقتصادية والتراخيص اللازمة.</p><p style="padding:0 14px;font-weight:600">الأهداف:</p><ul><li>متابعة تقدم المشاريع المنجمية والصناعية المبرمجة بالولاية.</li><li>المطالبة بالشفافية في آجال الإنجاز ومراحل استغلال المشاريع.</li><li>تشجيع تحويل المواد الأولية محليًا بدل الاكتفاء باستخراجها.</li><li>استقطاب الاستثمارات الصناعية المرتبطة بالثروات المحلية.</li><li>تطوير سلاسل المناولة والخدمات والنقل المرتبطة بالنشاط المنجمي.</li><li>خلق مناصب شغل مباشرة وغير مباشرة لفائدة شباب المنطقة.</li><li>ضمان مراعاة شروط حماية البيئة والصحة والسلامة.</li><li>تعزيز مساهمة النشاط المنجمي في التنمية الاقتصادية المحلية.</li></ul></details>
+<details><summary>المحور الرابع: البنية التحتية وفك العزلة وتحسين الربط الاقتصادي</summary><p style="padding:0 14px;font-weight:700">الطريق السيار شرق–غرب والتنمية المحلية</p><p style="padding:0 14px">ألتزم بالدفاع عن تحسين شبكة الطرقات والربط بين بلديات الولاية ومحاور النقل الكبرى، والعمل على رفع انشغالات المواطنين والمهنيين إلى الجهات المختصة، بما يسهل تنقل الأشخاص والبضائع ويشجع الاستثمار.</p><p style="padding:0 14px;font-weight:600">الأهداف:</p><ul><li>الترافع من أجل تحسين الربط بين سوق أهراس ومحاور الطريق السيار شرق–غرب.</li><li>متابعة مشاريع صيانة الطرقات الولائية والبلدية وتأهيلها.</li><li>فك العزلة عن المناطق الريفية والفلاحية.</li><li>تسهيل نقل المنتجات الفلاحية نحو الأسواق ومراكز التحويل.</li><li>دعم الربط بين المناطق الصناعية ومناطق الإنتاج والمحاور التجارية.</li><li>تحسين السلامة المرورية ومعالجة النقاط السوداء.</li><li>متابعة مشاريع النقل والخدمات اللوجستية حسب احتياجات السكان.</li><li>تحقيق تنمية أكثر توازنًا بين مختلف بلديات الولاية.</li></ul></details>
+<details><summary>المحور الخامس: تجسيد المنطقة الحرة بالحدادة وتنمية الشريط الحدودي</summary><p style="padding:0 14px;font-weight:700">الحدادة بوابة اقتصادية واعدة</p><p style="padding:0 14px">ألتزم بالعمل الدؤوب والترافع لدى السلطات المختصة من أجل الإسراع في تجسيد مشروع المنطقة الحرة بالحدادة، باعتباره مشروعًا استراتيجيًا يمكن أن يحول الشريط الحدودي لولاية سوق أهراس إلى فضاء اقتصادي منتج وجاذب للاستثمار والتبادل التجاري.</p><p style="padding:0 14px;font-weight:600">الأهداف:</p><ul><li>الترافع من أجل تجسيد مشروع المنطقة الحرة بالحدادة في أقرب الآجال الممكنة.</li><li>المطالبة بتوضيح مراحل المشروع وآجال إنجازه والجهات المكلفة به.</li><li>استقطاب الاستثمارات الوطنية والأجنبية وفق التشريعات المعمول بها.</li><li>خلق مناصب شغل مباشرة وغير مباشرة لفائدة شباب المناطق الحدودية.</li><li>تنشيط المبادلات التجارية وتطوير الخدمات اللوجستية والنقل والتخزين.</li><li>تطوير البنية التحتية والخدمات الضرورية للمناطق الحدودية.</li><li>تثمين الموقع الاستراتيجي لسوق أهراس في المبادلات الاقتصادية بين الجزائر وتونس.</li><li>المساهمة في تثبيت السكان وتحسين ظروف عيشهم والحد من الهجرة نحو المدن الكبرى.</li></ul></details>
+<details><summary>رؤيتنا: سوق أهراس 2030</summary><p style="padding:0 14px">نؤمن بأن مستقبل سوق أهراس لا يُبنى بالشعارات وحدها، بل بالمشاريع المدروسة والمتابعة الجادة والتنسيق الفعّال بين المنتخبين والسلطات التنفيذية والفاعلين الاقتصاديين والمجتمع المدني.</p><p style="padding:0 14px">إن تكامل محيطات السقي مع الصناعة التحويلية، وتثمين الثروات المنجمية، وتطوير البنية التحتية، وتجسيد المنطقة الحرة بالحدادة، من شأنه أن يشكل قاعدة اقتصادية متكاملة تفتح آفاقًا جديدة أمام الاستثمار والتشغيل والتنمية المستدامة.</p><p style="padding:0 14px">هدفنا أن تصبح سوق أهراس ولاية منتجة، جاذبة للاستثمار، موفرة لفرص العمل، وقادرة على تثمين مواردها وموقعها الاستراتيجي لصالح جميع أبنائها.</p></details>
+<details><summary>كلمة المترشح</summary><p style="padding:0 14px">أتعهد أمام مواطني ولاية سوق أهراس بأن أجعل من العمل الميداني، والمتابعة المستمرة للمشاريع، والدفاع عن انشغالات المواطنين، أساسًا لممارستي لمهامي الانتخابية.</p><p style="padding:0 14px">لن أعد بما يتجاوز الصلاحيات القانونية للمجلس الشعبي الولائي، وإنما ألتزم بالترافع المسؤول، وطرح الانشغالات بوضوح، ومتابعة الملفات، والمطالبة بالشفافية في تنفيذ المشاريع، والعمل من أجل تنمية عادلة تشمل جميع بلديات الولاية.</p><p style="padding:0 14px;font-weight:700">طبيب حركاتي<br>مهندس فلاحي — مسير مكتب دراسات فلاحي</p><p style="padding:0 14px">من أجل سوق أهراس منتجة، واقتصاد محلي قوي، ومستقبل أفضل لشبابنا.</p></details>
+<p style="font-weight:600;margin-top:12px">هل أنت إطار أو صاحب كفاءة في الولاية؟ أضف فكرتك أو ملاحظتك لإثراء هذه المحاور.</p>
+<div class="btns"><button class="btn" type="button" data-go="ask">💬 أضف فكرتك أو ملاحظتك</button></div>
+</div>
+
+<div class="card pg" id="observatory">
+<h2>🔭 مرصد التنمية المحلية لولاية سوق أهراس</h2>
+<div class="slogan">مبادرة من المترشح طبيب حركاتي</div>
+<p>منصة رقمية لإحصاء احتياجات ومشاريع التنمية المحلية عبر بلديات الولاية الـ26، تجعل انشغالات المواطنين مرئية وموثقة وقابلة للمتابعة.</p>
+<p style="font-weight:600">تهدف المنصة إلى:</p>
+<ul style="margin:0;padding:0 24px 8px 0">
+<li>إحصاء الاحتياجات والمشاريع المقترحة حسب البلديات.</li>
+<li>إتاحة عرض عام يطّلع من خلاله المواطنون على جميع المشاريع المقترحة.</li>
+<li>توفير فضاء يرسل فيه المواطنون مشاكلهم واقتراحاتهم.</li>
+</ul>
+<p class="note">تُعرض المبادرة على المجلس الشعبي الولائي في حال انتخابه. وبعد اعتمادها، يتولى المجلس اقتراح المشاريع وتسجيلها، بينما تتولى الولاية والبلديات والهيئات الرسمية التمويل والتنفيذ، كل في حدود صلاحياته.</p>
+<div class="btns"><a class="btn s" href="https://claude.ai/artifact/1R5KMHDQjdYGQkktWWUDj7" target="_blank" rel="noopener" style="text-decoration:none">فتح مرصد التنمية المحلية</a></div>
+</div>
+
+<div class="card" id="agenda"><h2>اللقاءات الميدانية</h2><div id="ag"></div></div>
+
+<div class="card" id="pledge">
+<h2>كم صوتًا يمكنك جمعه؟</h2>
+<label>الاسم (اختياري)</label><input id="nm" placeholder="اسمك الكامل">
+<label>بلديتك</label><select id="home"></select>
+<label style="margin-top:14px">أضف الأصوات المتوقعة حسب البلدية ونوع العلاقة</label>
+<div id="rows"></div>
+<div class="btns"><button class="btn s" id="add">＋ إضافة بلدية أخرى</button></div>
+<div style="margin-top:14px">
+<div class="big"><span id="tot">0</span> <span style="font-size:1rem;font-weight:400;color:var(--mu)">صوتًا متوقعًا</span></div>
+<div class="bar"><i id="pb"></i></div>
+<div class="note" id="goal">الهدف المطلوب: 10 أصوات على الأقل</div>
+</div>
+<div class="btns"><button class="btn" id="save">حفظ تقديري</button><button class="btn s" id="copy">نسخ رسالة للإرسال</button></div>
+<div id="msg"></div>
+<p class="note">لا تُسجَّل أسماء الناخبين ولا أرقامهم؛ فقط أعداد تقديرية حسب البلدية ونوع العلاقة.</p>
+</div>
+
+<div class="card" id="contact">
+<h2>📝 استمارة التسجيل في شبكة الدعم والتطوع</h2>
+<p style="margin:0 0 6px;font-weight:700">المترشح طبيب حركاتي</p>
+<p class="note" style="margin-top:0">المجلس الشعبي الولائي لولاية سوق أهراس — 28 نوفمبر 2026</p>
+<p style="font-size:.93rem">تهدف هذه الاستمارة إلى تنظيم شبكة المتطوعين والمساهمين في الأنشطة الاتصالية والميدانية للمترشح طبيب حركاتي، في إطار العمل التطوعي المنظم والتواصل المسؤول.</p>
+<p class="note">التسجيل اختياري، وتُستخدم المعلومات المقدمة لأغراض تنظيم التواصل والأنشطة التي وافق عليها صاحبها، مع احترام خصوصية المشاركين.</p>
+
+<h2 class="sec">القسم الأول: المعلومات الأساسية</h2>
+<label>1. الاسم واللقب *</label><input id="vn" autocomplete="name">
+<label>2. البلدية *</label><select id="vc"></select>
+<label>3. رقم الهاتف (اختياري)</label><input id="vp" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" style="text-align:right" placeholder="05XXXXXXXX">
+<label>4. كيف تفضل التواصل؟</label><div class="opt" id="vpref"></div>
+
+<h2 class="sec">القسم الثاني: المساهمة التطوعية</h2>
+<label>5. كيف ترغب في المساهمة؟ (يمكن اختيار أكثر من إجابة)</label><div class="opt" id="vh"></div>
+<label>6. ما الوقت الذي يمكنك تخصيصه؟</label><div class="opt" id="vt"></div>
+<label>7. ملاحظات أو اقتراحات (اختياري)</label><textarea id="vnote" rows="3" maxlength="500" style="width:100%;padding:9px 10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit"></textarea>
+
+<h2 class="sec">القسم الثالث: الموافقة</h2>
+<div class="opt"><label><input id="vok" type="checkbox"><span>8. أوافق طوعًا على تقديم المعلومات الواردة في هذه الاستمارة واستخدامها لتنظيم التواصل والأنشطة التي اخترت المساهمة فيها، مع إمكانية طلب تصحيح معلوماتي أو سحب موافقتي. *</span></label></div>
+
+<div class="btns"><button class="btn" id="vsend" type="button">إرسال الاستمارة</button></div>
+<div id="vout" style="font-size:.92rem;margin-top:10px;min-height:1.2em"></div>
+<p class="note">تُحفظ الاستمارة لدى المترشح ولا تُنشر في هذه الصفحة.</p>
+</div>
+
+<div class="card" id="ask">
+<h2>تواصل معي</h2>
+<p class="note" style="margin-top:0">سؤال أو انشغال أو اقتراح؟ اكتب هنا وأرسله. لا تكتب بيانات شخصية حساسة. الاتصال اختياري، وتُستعمل المعلومات لدراسة رسالتك فقط ولا تُنشر.</p>
+<div class="r2"><div><label>النوع</label><select id="at"><option>سؤال</option><option>انشغال / مشكلة</option><option>اقتراح</option><option>تطوع</option></select></div><div><label>البلدية *</label><select id="ac"></select></div></div>
+<label>الموضوع *</label><input id="an" maxlength="120">
+<label>الرسالة * (15 حرفًا فأكثر)</label><textarea id="ad" rows="4" maxlength="1200" style="width:100%;padding:9px 10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit"></textarea>
+<label>وسيلة اتصال (اختياري)</label><input id="ak" maxlength="80">
+<div class="btns"><button class="btn" id="asend" type="button">إرسال الآن</button><button class="btn s" id="ago" type="button">أو جهّز رسالة لواتساب أو البريد</button></div>
+<div id="asout" style="font-size:.92rem;margin-top:10px;min-height:1.2em"></div>
+<div id="aout" style="display:none;margin-top:12px"><textarea id="amsg" rows="5" readonly style="width:100%;padding:9px 10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit"></textarea><div class="btns"><button class="btn s" id="acp" type="button">نسخ النص</button><a class="btn s" id="awa" target="_blank" rel="noopener" style="text-decoration:none">إرسال عبر واتساب</a><a class="btn s" id="aml" target="_blank" rel="noopener" style="text-decoration:none">إرسال بالبريد</a></div></div>
+</div>
+
+<div class="card" id="faq"><h2>أسئلة شائعة</h2>
+<details><summary>ما هو المجلس الشعبي الولائي؟</summary><p style="padding:0 14px 10px">هيئة منتخبة بالاقتراع العام تمثل سكان الولاية وهي هيئة المداولة فيها. يناقش برامج التنمية ويصادق على المداولات الداخلة في اختصاصه ويتابع انشغالات المواطنين، أما التنفيذ فيعود إلى الوالي والمصالح والهيئات المختصة.</p></details>
+<details><summary>ماذا يستطيع المنتخب الولائي أن يفعل؟</summary><p style="padding:0 14px 10px">يقترح المشاريع ويناقشها ويدافع عن تسجيلها ويتابع إنجازها، لكنه لا يصدر وحده أوامر تنفيذية ولا يلتزم بنفقات عمومية خارج الإجراءات القانونية.</p></details>
+<details><summary>ماذا سيحدث لرسالتي؟</summary><p style="padding:0 14px 10px">تُسجَّل في صندوق الانشغالات وتُدرس، وقد تتحول إلى اقتراح مشروع في سجل المرصد. لا تُنشر رسالتك ولا بياناتك.</p></details>
+<details><summary>متى الانتخابات؟</summary><p style="padding:0 14px 10px">السبت 28 نوفمبر 2026. للتحقق من مكتب تصويتك وشروط التصويت راجع السلطة الوطنية المستقلة للانتخابات (ANIE).</p></details>
+</div>
+
+<div class="card hide" id="dash">
+<h2>لوحة المترشح: الشبكة الانتخابية</h2>
+<div class="big"><span id="gt">0</span> <span style="font-size:1rem;font-weight:400;color:var(--mu)">صوت من <span id="gp">0</span> داعم</span></div>
+<div class="note" id="gv"></div>
+<h2 style="margin-top:14px;font-size:.95rem">حسب البلدية</h2><div id="byc"></div>
+<h2 style="margin-top:14px;font-size:.95rem">حسب نوع العلاقة</h2><div id="byr"></div>
+</div>
+<footer>هذه الصفحة تعرّف بحملة المترشح طبيب حركاتي ولا تمثل جهة إدارية رسمية. المشاريع والأرقام الواردة مقترحات وتقديرات أولية وليست قرارات أو اعتمادات.</footer>
+</div>
+<script>
+(function(){
+ var msg='معاينة للشكل فقط: الحفظ والإرسال يعملان في نسخة Google Apps Script.';
+ var r={withSuccessHandler:function(){return r},withFailureHandler:function(f){r._f=f;return r}};
+ ['savePledge','saveVolunteer','saveConcern','getStats'].forEach(function(n){r[n]=function(){setTimeout(function(){alert(msg)},50)}});
+ window.google={script:{run:r}};
+ var b=document.createElement('div');b.textContent='🔍 '+msg;
+ b.style.cssText='background:#fff3cd;color:#664d03;padding:8px 12px;font-size:13px;text-align:center';
+ document.body.insertBefore(b,document.body.firstChild);
+})();
+</script>
+<script>var LOGO="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAB4AMgDASIAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAAAgABBQYHAwQI/8QATRAAAQIEAwQFBQwFCwUBAAAAAQIDAAQFEQYSIRMxQWEHIlFxgRRSkcHRFRcjMjNCU3KSlKGxFlWT4fAkNENFVGJjc4LC0iU1RIOis//EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/EAC4RAAIBAgUDAgUEAwAAAAAAAAABAgMRBBIhMVEFE0EygRRScZGxFUJDU2Gh0f/aAAwDAQACEQMRAD8A2AqWDa8LOocYg6pU66iaWxSqLtgjfMPLCUq7hfWIpycx4NU06UA7EhJ/3RzlUS8M9lPBymr5or6tFmqVYlKRKGbn3wyyCE3Kbkk8ABqTFdV0n4fQqxVOd+wt+ZjxuVjHDQ+EpCFga6MZvyVHmdxjVW+rUsPMLTxzsqT+YMc3Xj/lex2/S8RL0Si/o0T0v0i4bf0M+pq/0rKh6jEtKYgpU/YSlTlXidyUui/oMUI1nB9RNqhhwMKO9cvbT0WMN+iWD6v/ANrrbkq6dzb9j+CrH8Y1GrGWzR5quBxlHWcHY0wqXx0hZ1dsZp+jONsO/CUmomaZTqENu3v/AKF6egx2kukmekXxK4gpakrGhW0koX35Dv8AAxvNyePPbfQ0bMriYcKJ4xFUuvUutt5qfOIeVxbPVWnvSdY7TtZptMT/AC2daZPmlV1egaxptWudYRlN2irkgFGEVW3xUpjpFpDJIYZmZjmEBI/GPC50mIOiKSoj+88B6o5OvTXk98Ol4yauqb/H5L0VK4GBzqHGKIOkxQ/qkD/3/ugk9JjR+UpRH1Xx7InxFPk0+k4xbw/2v+l62hPIw4WdximNdI1NX8rJTTfMFKvXHrRj+hKFlLmU/WZ/fGlWpvycn07Fr+NlnKljcdIYLUeMV0Y8oH9pdHeyqGOO8PjdMu+DCovdhyZ+BxX9b+zLJnV2ws6u2KurpAoQ3Kml9zP748zvSPTE/Jyc0vvyp9cR1qa8mo9NxctqbLkVHtgdortilJx9Ozq9nTaE48o7uuVfkPXEjKjF1QIVMLlKW0eCG9o5+JsIKrGXp1E8BVpK9VqP1av9ldlkzqte8OHFd8cpVksMBCnnHiN63DcmOhAOojqeJhhV4Ucwcv8AG+FAg1+AhoUOBADawQud+vfrDQSN0AeKbotLngfKqfLuHtKAD6RFeqHR3TZhJVJPOyq+AUc6Px1/GLefiwhHOVOEt0eqjjMRRd6c2jMn5XFOETnbecVLJ+cg7Ru3NJ3R60Y1ptVlvJsQ0pDybfHbSFD0HUeBjQiAQQQCCNQeMUDGGEG2GV1Wmt5EJ6z7CdwHnJ9Yjzzpzpq8HpwfXoYnC42Sp4qCUn+5afcpVVZkm6iX6F5SyynVAcXZaTyI1tHhTOOZyXypaidVKPW8Y9kWyoYEQ9g5iflUH3RQ1tnB9Ik65bdoG7xjhTbrXUjp1HCx6Wo18JJp7W3uVl52ksSQcROuzcyofJNtFCU96leoRELmXVb1WHLSOe+NA6PMIy06x7s1FoPIzFMu0sXSbb1EcddBHeNKN9EfArdUxuJdpTftp+CnSdFq1TTmk6fNTCfOQ2cvp3R61YNxIlNzRpm3IA+uNyCMqQEiwG4DhA2sY79pHlyN6tnz/MU6oSRtMycywR57ah6o86X3BucPdePolzdb848MxSqdN/zmnyr1/PZSfVEdJM1F1Yawm17mEpm3QRcBXhEvJVCgaCflKik8Sy8gj0ECNOmMDYZfTmVSm0E8WlKR+RiOd6McPOAltU219V6/5iOfYXCPXHqGPirKqyCkpno8URtXJ1J7JgL/ANukWKRmMBoI8mdpl/8AEOv/ANRGO9FMgT8FVZlH1m0q9keZfRMo/J1pJ+vL+xUbUMu0Ucp4zFz9Um/cvjNSpRTaXnpO3ANvI9RjqmYYVqH2iOSwYzdXRLNjX3VlvFhXth0dFEx86sMD6rCvbHS8uDz5p8GlB5oA3dR9oRyVNyzepmWU97iR64orPRTLC23rDyxxDbIT+ZMS8n0cYbliFOS7s2R9O5cegWi3fBU5cFjZn5GbcLUvOMPOAXKG3Aoj0QoKSkpWRZ2MpLNS7Y+Y0gJH4Qo0bCtBoGkCRrBp3QABgk6CGtrBDdADn4sMN0ORwir0nE7tWxpOUxpGSUk2VjUarWFAE8h2RG7EbSLPHNxKVtqbWAUKSQoEbwd8dIFUUpnrfR5NirhK3mjTwvNnv1inzcvbwjQwEpQEgAJAAty7ICIqu4op+HXJVE8Hf5SqwUhBISOJJ9Q1jnCnGnex68VjauJs6r2M9nOjusqxAuXl2U+RuOlSJkEZUIJvqN9x2RqkjIs0ynsSUumzTDYQnw4xH4exVTMRbdMkpaXGFdZDibKy30V3H0xMK9UaiktUeGMUtUCly2+HJuRzgFDSDHzY0bE9nCFFtIWsJJSkmwJ4C8eSnzDs3JpfebabWVEFLLu1TobfGsI4YhkqhPySGafNNS6g4FObXNZxNj1bpIIBNrxXUjEuFKJMZWqSuUZWpwKDjgyBSr2AtuBPE7olzLdmW5M3LuPuyiHkKfZCVONg9ZIO4kc4MX04XihUf3fRXXRKM0iafTKjaTAmVKSvMq5KiBcqJ4HcBpExKO4tUqaCTR5m7xCgZhw7E2F0aDhv8YiYUrlnI1EJN7+MVGh0OpMT7ziKw3JbNwbanyhLzY4m5c1BI7I8Vax/OUXFcxJu08uSaAlKUE5VqPnpPEG9gOUL23DlZXZfli8crQaFFxpCygoKgCUq3p5GKph/Fpr2KZ6TZSUybLN2rp1UQqylHsvfQcotytotCk2MNu746ucI5kRSjhVz2GFA20hQAVxBJ+LAEaXghugASTBjdHMwkvtqfWwDdbaEqVyBJt+RgDqTqO+M5wWLdI1bH+d/+gjRT8Yd8ZxhJ5qX6Rq4p5xDYO2AK1AC+0HbGZbo5y3Ro/CBVujj5fJf2yXt/mp9sVagYrfncUVan1B1ltto/wAnAWMoCTY68SQQYtzbaRbY8tWcprEiZiqhky7Kgu7yQQFDcQO2Onlkpf8AnbH7VPtjPqnWaZiXGYkKrNhikySlJbTeyXnBpdSuA7OQ5wbsSUrItWGsSUCsTcyzS2tg+o7VwLaDZd4ZucS9WYm5mmvsyM0JWZWght4pvlP8ceEUTDjFI/T+bnaU6yzTpZjKCFZUqcUACE34aGL8qoSR/wDMl/2qfbEi7rUkXdalUpdMxsxUKe/O1Nh2XSgomGlHMAnw+Mo+dFy4iKfKYqeXj2apM06yiSDJEuUrGUkWVmKu0gkeEWkT8ncXm5f9qn2wVixt4O7pCUlSiEpAuSTYAdsc8iHEKSpKVoWmxB1CgYh8U7GqYbnZSWn2kOuN9XK8kZra5TruO6I3AOImZ/DyJebmG0TElZo7RYBUn5p15aeEW+thm1sWWTlZCQQtmRl5eXykFbbKAmxO64Eds7KHA2FIS45dYTcBSrWubceEZ9KVI0DpImm35wPSdVIIdKwoJJ+Lc8LG6e4iCxC4tjpIo09LzyXG3ilFtoClsA2WOQIN++M5iZ9DQSBobb98Z/iZtDfSjRHFpSpLqWwQoXB6yh6xF6M/JcJyX/ap9sUHH0zLoxPQZ1t9tQbWMykrBAAWk627zFlsJ7Gj+2M46OxscUV2X80m3g4oeuNGCgqxSbg6gjjFAwUyU45xGsDqoWpN+ZcJ9UHuhLdF+c4QIG+OhsSIEi140bGsNmYUP/RqhQBzvBXFoG2sEd0CAnUxXsO1NE3ibEMutQDzcykJTx2aU5RbxB9MWIjWKRijBM/NVc1mgzIZmXNXEbQtm/nJUO3iIy7mZXWqLtMPtSrRfmHEtNIF1LWbADvjKZLChxlWKxPS06hmWTNq2bimyraXJOm7hb0x7WsA4mq7qfdyqFLQO5bxeV4DcIvtEo0pQqaiRkwrIklSlLN1LUd5MT1bmbOb1WhRPekd/W7P3c+2Dc6JtGwirpHU6+dgm6uJGu7dGjmICh0Sq0qqT7s3V1Tko+rO024LqzHiTwtusNDDIuC9uPBVPelX+uGvu59sdWeiYDPtqvcZeps2bWPO53RoYg4ZIjtxM196R476w193P/KF70jo/rhn7uf+UaYN0MqGSI7cTN19E42TYTV0heufMxoddLC+mkB70jv64Z+7n2xpBgxvEMkR24maHokdH9bs/dj7Y6THROlbxMvVQlsJAAcZzEG2ut+2NHXAiGRF7cTOh0TASqwaqNsVgpUGeqE63Fr74TfRMA26F1ZJWUjZlLNgDfW+uotGjG2S0CN8XIiduPBm/vSO/rhn7uf+UOOiZYbc/wCroLmXqAMWF+eu6NIJ0EPEyIduJUsC0nENJMyxVXz5K3ZDDRUFgneVJO8J5RMUSjJpRnXlEKmJ6ZW+4RwBJyjwH4kxLaQHbGkrGlFIJe4Q2a4MOvcIAbzFNBDVJhQ3A90KAG4w5hhBQIDxjwTlRfln3kNspWlpCFXsTcqNuH8GJDjD2BvoD4b4jNxaW6IYVx0sl3YsjKQkoKjmJIvcDs9hjoxVpiZdbQlltslxLbgWSSklBUfy074lNmjMFbNGa1gcovBWG+wv3RLPk25w8RI1qqKVNlpxDaUbdTQJNjoDr+EcpqtKl5t1jycLyOJAIJ6ybDMe8EgeMShZaJJLTZJNySgQWVJN8ov3CFnyFKF72IlusnO2lxDNloz50rNk3SohJ59WEKtMqSfgmULu2QlRJ6qiBe45ndErsW8pGzRYm5GUWJhw2gEkITdWp6o1hZ8jPDghv0hXYDycXLlgTcAItos8tDeGGIV7JalS6SoLFgm56muY6X3AROZE+andbdwgUtNpvlQhN+xIELPkuen8pwlJlM20pact0rUkgKvuJAPjaPSN4gUtIbJyoSkq32AF4IbxGjk7X0PNUHnGUMls2Kn0JPME6iIR2sTwYlL/AARecWlWgzEBdgQo9UWHA66RY1AG1wDY31G4w2RJSUFCSk/Ntp6Iy035OkJxitVchnpx4MzMz5aUOsuKSiWsmyrHQEbyVaa844uVacE3LM7QJS68tKrJAUAFkDrHq6DhvidUwyXA8WWy4Ny8ouPGFkSoFJQkpvfLl0v2wyvkqqRXghDNTjyZhQnHG9jLuOJypTqQtYF7g8EiAfqk4mbmEh0gJktoE9Xqm180T2zQL/BpGYWPV3j+DDFtskktoJKcpJSNR2d0TK+SqrH5TyImZeQa20xUlvJWUp66kqsT9UR5qVUJqbmXEPAhCWyUk2uohxQvYbtwHhEimWlkAhMsykG17Ngd0F1UnRKRw0EWzMucbPTUNR0ECDrDKOkDmjRxDvoe6FHPNv7oUAdQIeGh4hR4ccYYQ4igrON61M0qlusy7TiFzMq/sppCvknEIzhNuaQrXlzgEdJuDFNpKq/LAkAkFK9PwiW9wJdddFXffmZh1Dam2mnXMzTIV8YpTbeRpc30iQ8ll/oGvsCAMzoPSouexY83MLYVRn05minRyUslR64tc3CCTa9rjWJKVxa9VqPO1AvGbZpNSbc29McLaXWDY9YKFzlCusnjaLqKXT0zYmxISwmAgoDoaTnCTvF7bo8dTw7KVZxgTDj6JdlxLqpZpQS08QbjOANQCAbX4QAFEem3qpXEzKlqbanghi4sAjZINh4k+mPa3OPrqbsoqnTDbSE3TNKKNms6aCxzceI4Q8lJLlX5t1U08/5Q9tAly1m9AMqeWkeyAI6t1U0aTamzLKfaL7bbpSoAtpUrLn52JGkVuRxeaDh+jP4j2iG5zaodnV6htwKJSFAa2UAbHkIsNSoMvVp6UmJuYmS3KuB1MqlyzK1jVJUm2tjrvteBOH5VyuCrTD0xMONoKGWnVhTTN/jFKbbzuubwBScaY9wtU6WxLyM9JTz5eunbOvNNtdRV1KKACb/FA7VCONQxlgmpUCkhycKXGktNKlkTDyVS6FZQ5cp+NlA49kaUZeX+ga/ZiEJdgf0LY/0CAKfO9LOEpI5GJ3ysJYUsFoHUpsAjX5xv+BjuzisYimKW/RFuGTTVjLPrA0dSGFLJ5JCiBztFoMux9A19gR55iRDr8o40+5LJlnS4ptpKQl24tZWkAHNTj7ExLst06YmUPGy3WigJa5quQfQDHKqVT3KEotUst5l+aQw4tKvkQs2SojiM1h4x7Cq2sRs7R5efqsrPzL80vyRW0altp8DntYLKbakcNYAq89jaZwzTUvVFCXlP1WZbzPrKAllDlurYG5sRYcbGJCY6SsJpl3DK16SceCTs0ulaUlXC5CTYRI1ihM1qZlnJqdmxLMOJdVJIUkMuqSbjNpffra+se8paB+Ra/Zj2QBXcKY0mK8/5HOUmYZcOYonZdlZlHgNcyVKAI8RFnK9YBTxIsVG3ZHFTvOBm53U5pAbSOCndI5l2Auekuc4UeIvWhQJcnA2rlD7NXKFCgbHCDyhwkiFCgB8phWhQoAe0NaFCgBWhWMKFACtDFJMKFADbM8obZq5QoUAMW1Hshi0vl6YUKABLLhHD0wJl3T5vphQoAEyrx3ZfTAGTfPm+mFCgSwBkZg+Z9qOZp80T8z7UKFAWBNNm/wC59r90AaXOf4f2v3QoUCZUczSJ4/Rfb/dChQoFyo//2Q==";</script>
+<script>
+var COM=["سوق أهراس","سدراتة","الحنانشة","المشروحة","أولاد إدريس","تيفاش","الزعرورية","تاورة","الدريعة","الحدادة","الخضارة","المراهنة","أولاد مومن","بئر بوحوش","مداوروش","أم العظائم","عين الزانة","عين سلطان","ويلان","سيدي فرج","سافل الويدان","الراقوبة","خميسة","وادي الكبريت","ترقالت","الزوابي"];
+var REL=["عائلة","أصدقاء","زملاء العمل","جيران","جمعيات ونشاط","معارف آخرون"];
+var GOAL=10, rows=[{c:0,r:0,n:5}], DB=null, UID=null;
+var $=function(i){return document.getElementById(i)};
+function opts(a,sel){return a.map(function(x,i){return '<option value="'+i+'"'+(i===sel?' selected':'')+'>'+x+'</option>'}).join('')}
+$('home').innerHTML=opts(COM,0);
+function total(){return rows.reduce(function(s,x){return s+(x.n||0)},0)}
+function draw(){
+  $('rows').innerHTML=rows.map(function(x,i){return '<div class="row"><select data-i="'+i+'" data-f="c">'+opts(COM,x.c)+'</select><select data-i="'+i+'" data-f="r">'+opts(REL,x.r)+'</select><input type="number" min="0" max="500" inputmode="numeric" value="'+x.n+'" data-i="'+i+'" data-f="n"><button data-d="'+i+'" aria-label="حذف">×</button></div>'}).join('');
+  upd();
+}
+function upd(){
+  var t=total();$('tot').textContent=t;
+  $('pb').style.width=Math.min(100,t/GOAL*100)+'%';
+  $('goal').textContent=t>=GOAL?'✅ بلغتَ الهدف، بارك الله فيك!':'الهدف المطلوب: '+GOAL+' أصوات على الأقل (بقي '+(GOAL-t)+')';
+}
+$('rows').addEventListener('input',function(e){var t=e.target,i=t.dataset.i;if(i==null)return;rows[i][t.dataset.f]=Math.max(0,parseInt(t.value,10)||0);upd()});
+$('rows').addEventListener('click',function(e){var d=e.target.dataset.d;if(d==null)return;rows.splice(+d,1);if(!rows.length)rows.push({c:+$('home').value,r:0,n:0});draw()});
+$('home').addEventListener('change',function(){if(rows.length===1&&rows[0].n===5||rows.length===1){rows[0].c=+$('home').value;draw()}});
+$('add').onclick=function(){rows.push({c:+$('home').value,r:0,n:0});draw()};
+function say(t){$('msg').textContent=t}
+function text(){
+  var l=rows.filter(function(x){return x.n>0}).map(function(x){return '• '+COM[x.c]+' — '+REL[x.r]+': '+x.n}).join('\n');
+  return 'السلام عليكم،\nأنا '+($('nm').value||'أحد أنصارك')+' وأتوقع جمع '+total()+' صوتًا لصالح المترشح طبيب حركاتي (جبهة المستقبل — المجلس الشعبي الولائي، سوق أهراس، 28 نوفمبر 2026):\n'+l;
+}
+$('copy').onclick=function(){
+  var t=text();
+  var ok=function(){say('تم نسخ الرسالة، الصقها في واتساب.')};
+  var fb=function(){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');ok()}catch(e){say('تعذر النسخ تلقائيًا.')}a.remove()};
+  try{navigator.clipboard.writeText(t).then(ok,fb)}catch(e){fb()}
+};
+var ADMIN_KEY='';
+function esc(t){return String(t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+$('save').onclick=function(){
+  var b=this,r=rows.filter(function(x){return x.n>0}).map(function(x){return {c:COM[x.c],r:REL[x.r],n:x.n}});
+  if(!r.length){say('أدخل عددًا واحدًا على الأقل.');return}
+  b.disabled=true;say('جارٍ الحفظ…');
+  google.script.run.withSuccessHandler(function(){say('✅ تم حفظ تقديرك. شكرًا لك!');b.disabled=false}).withFailureHandler(function(){say('تعذر الحفظ، حاول لاحقًا.');b.disabled=false}).savePledge({name:$('nm').value,home:COM[+$('home').value],rows:r});
+};
+function bars(el,map){
+  var ks=Object.keys(map).sort(function(a,b){return map[b]-map[a]});
+  var mx=ks.length?map[ks[0]]:1;
+  el.innerHTML=ks.length?ks.map(function(k){return '<div class="k"><span>'+esc(k)+'</span><span class="b"><i style="width:'+(map[k]/mx*100)+'%"></i></span><span>'+map[k]+'</span></div>'}).join(''):'<div class="note">لا توجد بيانات بعد.</div>';
+}
+function dash(d){
+  $('gt').textContent=d.total;$('gp').textContent=d.supporters;
+  $('gv').textContent='عدد المسجّلين في شبكة التطوع: '+d.vol+' — عدد الرسائل والانشغالات: '+(d.conc||0);
+  bars($('byc'),d.byC);bars($('byr'),d.byR);
+}
+if(ADMIN_KEY){$('dash').classList.remove('hide');google.script.run.withSuccessHandler(dash).getStats(ADMIN_KEY)}
+var VCOM=COM.concat(["أخرى"]);
+var CP=["الهاتف","واتساب","رسالة نصية","لا أرغب في التواصل حاليًا"];
+var CH=["المساعدة في تنظيم الأنشطة","العمل على التعريف بالمترشح وإقناع الناخبين بالتصويت عليه","المساعدة اللوجستية","تقديم اقتراحات وأفكار","المساهمة في رصد انشغالات التنمية المحلية","مساهمة أخرى"];
+var CT=["حسب الإمكانات المتاحة","بضع ساعات أسبوعيًا","حسب الأنشطة المبرمجة","لم أحدد بعد"];
+var THX='شكرًا لاهتمامك ومساهمتك. سيتم التعامل مع المعلومات المقدمة بسرية مناسبة، والتواصل معك عند الحاجة وفي حدود ما وافقت عليه.';
+$('vc').innerHTML='<option value="">اختر البلدية</option>'+VCOM.map(function(x,i){return '<option value="'+i+'">'+x+'</option>'}).join('');
+function grp(id,arr,type,name){$(id).innerHTML=arr.map(function(x,i){return '<label><input type="'+type+'" name="'+name+'" value="'+i+'"><span>'+x+'</span></label>'}).join('')}
+grp('vpref',CP,'radio','vpref');grp('vh',CH,'checkbox','vh');grp('vt',CT,'radio','vt');
+function sel(name,arr){var o=[];document.querySelectorAll('input[name="'+name+'"]:checked').forEach(function(e){o.push(arr[+e.value])});return o}
+function vget(){
+ var n=$('vn').value.trim(),c=$('vc').value,pr=$('vp').value.trim();
+ var p=pr.replace(/[\s.\-()]/g,'').replace(/^(\+213|00213)/,'0');
+ if(n.length<2)return {err:'الاسم واللقب إلزامي.'};
+ if(c==='')return {err:'اختر بلديتك من القائمة.'};
+ if(pr&&!/^0[567]\d{8}$/.test(p))return {err:'أدخل رقم هاتف جزائري صحيحًا (مثال: 0550123456) أو اترك الخانة فارغة.'};
+ var pf=sel('vpref',CP)[0]||'';
+ if(pf&&pf!==CP[3]&&!p)return {err:'أدخل رقم هاتفك ليتسنى التواصل معك بالطريقة التي اخترتها.'};
+ if(!$('vok').checked)return {err:'الموافقة على استخدام المعلومات إلزامية.'};
+ var h=sel('vh',CH),t=sel('vt',CT)[0]||'',k=$('vnote').value.trim().slice(0,500);
+ var L=['استمارة التسجيل في شبكة الدعم والتطوع — المترشح طبيب حركاتي','الاسم واللقب: '+n,'البلدية: '+VCOM[+c]];
+ if(p)L.push('الهاتف: '+p);
+ if(pf)L.push('طريقة التواصل المفضلة: '+pf);
+ if(h.length)L.push('المساهمة: '+h.join('، '));
+ if(t)L.push('الوقت المتاح: '+t);
+ if(k)L.push('ملاحظات: '+k);
+ L.push('الموافقة على استخدام المعلومات: نعم');
+ return {txt:L.join('\n'),d:{name:n,commune:VCOM[+c],phone:p,pref:pf,help:h.join('، '),time:t,note:k}};
+}
+function vs(t,bad){var m=$('vout');m.textContent=t;m.style.color=bad?'var(--rd)':'var(--ac)'}
+$('vsend').addEventListener('click',function(){
+ var r=vget();if(r.err){vs(r.err,1);return}
+ var b=this;b.disabled=true;vs('جارٍ الإرسال…');
+ google.script.run.withSuccessHandler(function(){vs(THX);b.disabled=false}).withFailureHandler(function(){vs('تعذر الإرسال، حاول لاحقًا.',1);b.disabled=false}).saveVolunteer(r.d);
+});
+$('go').addEventListener('click',function(){var e=$('pledge');try{e.scrollIntoView({behavior:'smooth',block:'start'})}catch(x){e.scrollIntoView()}e.style.outline='2px solid var(--ac)';setTimeout(function(){e.style.outline=''},1500)});
+var WA='213776549919',EM='tebib89@gmail.com',AGENDA=[];
+$('ac').innerHTML='<option value="">اختر البلدية</option>'+COM.map(function(x){return '<option>'+esc(x)+'</option>'}).join('');
+$('wa0').href='https://wa.me/'+WA+'?text='+encodeURIComponent('السلام عليكم، أود التواصل معك بخصوص حملتك.');
+$('ag').innerHTML=AGENDA.length?AGENDA.map(function(a){return '<p style="margin:0 0 8px"><span class="date">'+esc(a.date)+'</span> <strong>'+esc(a.commune)+'</strong> — '+esc(a.place)+'</p>'}).join(''):'<p class="note" style="margin:0">ستُعلن مواعيد اللقاءات الميدانية في البلديات هنا قريبًا.</p>';
+function aget(){
+  var c=$('ac').value,n=$('an').value.trim(),d=$('ad').value.trim(),t=$('at').value,k=$('ak').value.trim();
+  if(!c||!n||d.length<15)return {err:'حدّد البلدية واكتب الموضوع ورسالة لا تقل عن 15 حرفًا.'};
+  return {c:c,n:n,d:d,t:t,k:k};
+}
+function as(t,bad){var m=$('asout');m.textContent=t;m.style.color=bad?'var(--rd)':'var(--ac)'}
+$('asend').addEventListener('click',function(){
+  var r=aget();if(r.err){as(r.err,1);return}
+  var b=this;b.disabled=true;as('جارٍ الإرسال…');
+  google.script.run.withSuccessHandler(function(){as('✅ تم إرسال رسالتك. شكرًا لك، وستُدرس رسالتك.');b.disabled=false;$('an').value='';$('ad').value='';$('ak').value=''}).withFailureHandler(function(){as('تعذر الإرسال، حاول لاحقًا أو استعمل واتساب.',1);b.disabled=false}).saveConcern({type:r.t,commune:r.c,subject:r.n,message:r.d,contact:r.k});
+});
+$('ago').addEventListener('click',function(){
+  var r=aget();if(r.err){alert(r.err);return}
+  var c=r.c,n=r.n,d=r.d,t=r.t,k=r.k;
+  var m=['['+t+'] '+n,'البلدية: '+c,'','الرسالة: '+d,'',k?'للاتصال: '+k:'دون وسيلة اتصال'].join('\n');
+  $('amsg').value=m;$('aout').style.display='block';
+  $('awa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(m);
+  $('aml').href='mailto:'+EM+'?subject='+encodeURIComponent('['+t+'] '+n+' — '+c)+'&body='+encodeURIComponent(m);
+});
+$('acp').addEventListener('click',function(){
+  var t=$('amsg'),b=$('acp');
+  var ok=function(){b.textContent='تم النسخ ✓'};
+  try{navigator.clipboard.writeText(t.value).then(ok,function(){t.select();try{document.execCommand('copy');ok()}catch(e){alert('حدّد النص يدويًا وانسخه.')}})}catch(e){t.select();try{document.execCommand('copy');ok()}catch(x){alert('حدّد النص يدويًا وانسخه.')}}
+});
+document.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(){var e=$(b.getAttribute('data-go'));try{e.scrollIntoView({behavior:'smooth',block:'start'})}catch(x){e.scrollIntoView()}})});
+if(typeof LOGO!=='undefined'){var lg=$('logo');lg.src=LOGO;$('logobox').style.display='block'}
+draw();
+</script>
+</body>
+</html>
